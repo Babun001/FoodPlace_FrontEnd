@@ -75,16 +75,14 @@ export default function Home() {
       </div>
       <div className='container text-white '>
         {
-          foodCat !== []
-            ? foodCat.map((data, pos) => {
+          foodCat && foodCat.map((data, pos) => {
               return (<div className='row mb-3' key={pos}>
                 <div key={data._id} className='fs-3 m-3'>
                   {data.CategoryName}
                 </div>
                 <hr />
                 {
-                  foodItem !== []
-                    ? foodItem.filter((item) => item.CategoryName === data.CategoryName && item.name.toLowerCase().includes(search.toLowerCase()))
+                  foodItem && foodItem.filter((item) => item.CategoryName === data.CategoryName && item.name.toLowerCase().includes(search.toLowerCase()))
                       .map(filterItems => {
                         return (
                           <div key={filterItems._id} className='col-12 col-md-6 col-xl-3'>
@@ -94,11 +92,9 @@ export default function Home() {
                           </div>
                         )
                       })
-                    : <div>Error: No Such Data Found</div>
                 }
               </div>)
             })
-            : ""
         }
       </div>
       <div><Footer /></div>
