@@ -13,28 +13,28 @@ export default function NavBar() {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-success">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <Link className="navbar-brand fs-1 fst-italic" to={"/"}>FoodPlace</Link>
+                    <div className="navbar-brand fs-1 fst-italic">
+                        FoodPlace
+                    </div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto ">
-                            {/* <li className="nav-item">
-                                <Link className="nav-link active fs-5" aria-current="page" to="{/}">Home</Link>
-                            </li> */}
                             {
                                 (localStorage.getItem("authToken"))
                                     ? <li>
-                                        <Link className='nav-link active fs-5' aria-current='page' to={""}>My Orders</Link>
+                                        <Link className='nav-link active fs-5 hover-overlay' aria-current='page' to={""}
+                                        style={{ backgroundColor:""}}>My Orders</Link>
                                     </li>
                                     : ""
                             }
                             <div className='navbar-nav me-auto'>
                                 {
                                     (localStorage.getItem("authToken"))
-                                        ? <select className="form-select bg-success text-white mx-3 form-select-sm fs-5" style={{width:"250px", height:"35px",border:"none",margin:"4px"}} aria-label="Disabled select example">
+                                        ? <select className="form-select bg-success text-white mx-3 form-select-sm fs-5" style={{ width: "250px", height: "35px", border: "none", margin: "4px" }} aria-label="Disabled select example">
                                             <option defaultValue disabled>Select Restaurant</option>
                                             <option value="1">Restaurant Nisha</option>
                                             <option value="2">Haji Biryani</option>

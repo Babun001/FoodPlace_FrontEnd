@@ -7,7 +7,7 @@ export default function SignUp() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const responce = await fetch('http://13.228.225.19:5000/api/createuser', {
+            const responce = await fetch('https://foodplacebackend.onrender.com/api/createuser', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

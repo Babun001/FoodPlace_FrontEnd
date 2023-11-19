@@ -86,7 +86,7 @@ export default function Home() {
                       .map(filterItems => {
                         return (
                           <div key={filterItems._id} className='col-12 col-md-6 col-xl-3'>
-                            <Body foodName={filterItems.name}
+                            <Body foodItem = {filterItems}
                               options={filterItems.options[0]}
                               imgSrc={filterItems.img}></Body>
                           </div>

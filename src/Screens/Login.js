@@ -8,7 +8,7 @@ export default function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const responce = await fetch('http://13.228.225.19:5000/api/loginuser', {
+            const responce = await fetch('https://foodplacebackend.onrender.com/api/loginuser', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -16,7 +16,7 @@ export default function Login() {
                 body: JSON.stringify({ email: credentials.email, password: credentials.password })
             });
             const json = await responce.json();
-            console.log(json);
+            // console.log(json);
 
             if (json.success) {
                 localStorage.setItem("authToken", json.authToken)

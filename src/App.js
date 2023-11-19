@@ -10,24 +10,27 @@ import SignUp from './Screens/SignUp';
 import Login from './Screens/Login';
 import ConnectMe from './Screens/connect'
 import About from './Screens/about'
+import { CartProvider } from './Components/ContextReducer';
 
 function App() {
   return (
-    
 
-    <Router>
-      <div className='bg-dark'>
-        <Routes>
-          <Route exact path='/' element={<Home/>}/>
-          <Route exact path='/Signup' element={<SignUp/>}/>
-          <Route exact path='/login' element={<Login/>}/>
-          <Route exact path='/connectMe' element={<ConnectMe/>}/>
-          <Route exact path='/about' element={<About/>}/>
-        </Routes>
-      </div>
-    </Router>
-    
-    
+    <CartProvider>
+      <Router>
+        <div className='bg-dark'>
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route exact path='/Signup' element={<SignUp />} />
+            <Route exact path='/login' element={<Login />} />
+            <Route exact path='/connectMe' element={<ConnectMe />} />
+            <Route exact path='/about' element={<About />} />
+          </Routes>
+        </div>
+      </Router>
+    </CartProvider>
+
+
+
   );
 }
 
