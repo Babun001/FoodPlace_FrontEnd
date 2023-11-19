@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useDispatchCart, useCart } from './ContextReducer';
+import { useDispatchCart } from './ContextReducer';
 
 
 
 
 export default function Body(props) {
 
-  let dta = useCart();
+  // let dta = useCart();
   let dispatch = useDispatchCart();
   let option = props.options;
   let priceOption = Object.keys(option);
@@ -18,11 +18,11 @@ export default function Body(props) {
 
   const handleAddToCart = async () => {
     await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, price: props.finalPrice, quantity: quantity, size: size });
-    console.log(dta);
+    // console.log(dta);
   };
 
   const handleDescription = ()=>{
-    console.log(`clicked on description!`);
+    alert(`SORRY for Interrupt. The Event is still in progress!`);
     
   };
 
@@ -34,12 +34,12 @@ export default function Body(props) {
 
   return (
     <div>
-      <div className="card mt-3 " style={{ "maxHeight": "360px", "width": "18rem" }}>
+      <div className="card mt-3" style={{ "maxHeight": "360px", "width": "18rem" }}>
         <img src={props.foodItem.img} alt="..." style={{ height: "180px", objectFit: "fill" }}></img>
         <div className="card-body">
           <h5 className="card-title">{props.foodItem.name} </h5>
           <div className='container w-100'>
-            <select className='m-2 h-100 text-white font-weight-bold bg-success rounded' onChange={(e) => setquantity(e.target.value)}>
+            <select className='m-2 h-100 text-white font-weight-bold bg-dark rounded' onChange={(e) => setquantity(e.target.value)}>
               {Array.from(Array(9), (e, i) => {
                 return (
                   <option key={i + 1} value={i + 1}>{i + 1}</option>
@@ -48,7 +48,7 @@ export default function Body(props) {
             </select>
 
 
-            <select className='m-2 h-100 text-white font-weight-bold bg-success rounded' ref={priceRef} onChange={(e) => setsize(e.target.value)}>
+            <select className='m-2 h-100 text-white font-weight-bold bg-dark rounded' ref={priceRef} onChange={(e) => setsize(e.target.value)}>
               {
                 priceOption.map((data) => {
                   return <option key={data} value={data}>{data}</option>
@@ -57,14 +57,14 @@ export default function Body(props) {
             </select>
 
 
-            <div className='d-inline h-100 fs-5 '>
+            <div className='d-inline h-100 fs-5 ms-2'>
               ₹ {finalPrice}
             </div>
           </div>
           <hr></hr>
           <div>
-            <button className='btn btn-success justify-center ms-2 ' onClick={handleAddToCart}>Add to Cart</button>
-            <button className='btn btn-success justify-center ms-4 ' onClick={handleDescription}>Description</button>            
+            <button className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart}>Add to Cart</button>
+            <button className='btn btn-dark justify-center ms-4 ' onClick={handleDescription}>Description</button>            
           </div>
         </div>
       </div>

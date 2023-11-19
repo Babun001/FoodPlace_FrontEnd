@@ -10,9 +10,6 @@ const reducer = (state, action) => {
 
             default:
                 console.log("error in ContextReducer");
-            break
-        case "descp":
-            return [<h1>This is switch case</h1>]
     }
 }
 

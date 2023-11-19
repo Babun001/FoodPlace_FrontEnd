@@ -26,15 +26,14 @@ export default function NavBar() {
                             {
                                 (localStorage.getItem("authToken"))
                                     ? <li>
-                                        <Link className='nav-link active fs-5 hover-overlay' aria-current='page' to={""}
-                                        style={{ backgroundColor:""}}>My Orders</Link>
+                                        <Link className='nav-link active fs-5 ' aria-current='page' to={""}>My Orders</Link>
                                     </li>
                                     : ""
                             }
                             <div className='navbar-nav me-auto'>
                                 {
                                     (localStorage.getItem("authToken"))
-                                        ? <select className="form-select bg-success text-white mx-3 form-select-sm fs-5" style={{ width: "250px", height: "35px", border: "none", margin: "4px" }} aria-label="Disabled select example">
+                                        ? <select className="form-select bg-dark text-white mx-3 form-select-sm fs-5" style={{ width: "250px", height: "35px", border: "none", margin: "4px" }} aria-label="Disabled select example">
                                             <option defaultValue disabled>Select Restaurant</option>
                                             <option value="1">Restaurant Nisha</option>
                                             <option value="2">Haji Biryani</option>
@@ -61,7 +60,12 @@ export default function NavBar() {
                                 </div>
                                 :
                                 <div className='d-flex' style={{ margin: "0px 80px" }}>
-                                    <Link className="btn border-0 text-white  mx-2 fs-5" to="/"><img style={{ width: 30, height: 30 }} src={CartLogo} alt="X" /></Link>
+                                    <button className="btn border-0 text-white  mx-5 fs-5 position-relative" to="/"><img style={{ width: 30, height: 30 }} src={CartLogo} alt="X" />
+                                        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                                            99+
+                                            <span className="visually-hidden">unread messages</span>
+                                        </span>
+                                    </button>
 
                                     <Link className="btn text-white bg-danger mx-2" style={{ width: "80px", height: "30px", fontSize: "15px", margin: "9px", padding: "2px" }} onClick={handleLogout}>Log Out</Link>
                                 </div>
