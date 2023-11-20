@@ -32,7 +32,7 @@ export default function Model({children,onClose}) {
             {children}
         </div>
       </div>
-    </>
-    document.getElementById('cart-root')
+    </>,
+    document.getElementById('cart_root')
   );
 }
