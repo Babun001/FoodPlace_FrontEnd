@@ -37,7 +37,7 @@ export default function Body(props) {
       <div className="card mt-3" style={{ "maxHeight": "360px", "width": "18rem" }}>
         <img src={props.foodItem.img} alt="..." style={{ height: "180px", objectFit: "fill" }}></img>
         <div className="card-body">
-          <h5 className="card-title">{props.foodItem.name} </h5>
+          <h4 className="card-title">{props.foodItem.name} </h4>
           <div className='container w-100'>
             <select className='m-2 h-100 text-white font-weight-bold bg-dark rounded' onChange={(e) => setquantity(e.target.value)}>
               {Array.from(Array(9), (e, i) => {

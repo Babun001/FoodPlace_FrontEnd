@@ -11,6 +11,7 @@ import Login from './Screens/Login';
 import ConnectMe from './Screens/connect'
 import About from './Screens/about'
 import { CartProvider } from './Components/ContextReducer';
+import Cart from './Screens/Cart';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route exact path='/login' element={<Login />} />
             <Route exact path='/connectMe' element={<ConnectMe />} />
             <Route exact path='/about' element={<About />} />
+            <Route exact path='/cart' element={<Cart />} />
           </Routes>
         </div>
       </Router>
