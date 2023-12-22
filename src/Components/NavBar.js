@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import CartLogo from '../ImagesAndIcons/icon.jpg'
+import Model from '../Model';
+import Cart from '../Screens/Cart';
 
 export default function NavBar() {
-
+    const [cartView,setcartView] = useState(false)
     const navigate = useNavigate();
     const handleLogout = () => {
         localStorage.removeItem("authToken");
         navigate("/Login");
     };
-    const handleToCart =() =>{
-        navigate("/cart");
-    };
+    // const handleToCart =() =>{
+    //     navigate("/cart");
+    // };
 
 
     return (
@@ -63,12 +65,16 @@ export default function NavBar() {
                                 </div>
                                 :
                                 <div className='d-flex' style={{ margin: "0px 80px" }}>
-                                    <button className="btn border-0 text-white  mx-5 fs-5 position-relative" onClick={handleToCart}><img style={{ width: 30, height: 30 }} src={CartLogo} alt="X" />
+                                    <button className="btn border-0 text-white  mx-5 fs-5 position-relative" onClick={()=>setcartView(true)}><img style={{ width: 30, height: 30 }} src={CartLogo} alt="X" />
                                         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success fs-8">
-                                            99+
+                                            5
                                             <span className="visually-hidden">unread messages</span>
                                         </span>
                                     </button>
+
+                                    
+                                    {cartView? <Model onClose={()=> setcartView(false)}><Cart /></Model>:null}
+
 
                                     <Link className="btn text-white bg-danger mx-2" style={{ width: "80px", height: "30px", fontSize: "15px", margin: "9px", padding: "2px" }} onClick={handleLogout}>Log Out</Link>
                                 </div>

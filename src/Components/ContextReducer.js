@@ -4,12 +4,16 @@ const CartStateContext = createContext();
 const CartDispatchContext = createContext();
 
 const reducer = (state, action) => {
-    switch(action.type){
+    switch (action.type) {
         case "ADD":
-            return [...state,{id:action.id, name:action.name, quantity:action.quantity, size: action.size, price: action.price, img:action.img}]
-
-            default:
-                console.log("error in ContextReducer");
+            return [...state, 
+                { id: action.id, name: action.name, quantity: action.quantity, size: action.size, finalPrice: action.finalPrice, img: action.img }]
+            case "REMOVE":
+                let newArr = [...state]
+                newArr.splice(action.index,1)
+                return newArr
+        default:
+            console.log("error in ContextReducer");
     }
 }
 
@@ -24,5 +28,5 @@ export const CartProvider = ({ children }) => {
     )
 }
 
-export const useCart =() => useContext(CartStateContext);
-export const useDispatchCart = ()=> useContext(CartDispatchContext);
+export const useCart = () => useContext(CartStateContext);
+export const useDispatchCart = () => useContext(CartDispatchContext);

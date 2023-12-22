@@ -16,9 +16,14 @@ export default function Body(props) {
   const [quantity, setquantity] = useState(1);
   const [size, setsize] = useState("half");
 
+  let finalPrice = quantity*parseInt(option[size]);
+  useEffect(() => {
+    setsize(priceRef.current.value);
+  }, []);
+
   const handleAddToCart = async () => {
-    await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, price: props.finalPrice, quantity: quantity, size: size });
-    // console.log(dta);
+    await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity, size: size });
+    // console.log(quantity);
   };
 
   const handleDescription = ()=>{
@@ -26,10 +31,7 @@ export default function Body(props) {
     
   };
 
-  let finalPrice = quantity * parseInt(option[size]);
-  useEffect(() => {
-    setsize(priceRef.current.value);
-  }, []);
+  
 
 
   return (
