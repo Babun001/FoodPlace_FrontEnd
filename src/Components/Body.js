@@ -32,7 +32,7 @@ export default function Body(props) {
         break;
       }
     }
-    if(food !== []){
+    if(food != []){
       if (food.size === size){
         await dispatch({ type: "UPDATE", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity });
         return

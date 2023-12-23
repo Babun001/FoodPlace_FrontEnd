@@ -52,7 +52,7 @@ export default function Cart() {
                 <h1 className='fs-2 text-white'>Total Price : {totalPrice} /- </h1>
                 
             </div>
-            <button type="button" class="btn btn-success">O</button>
+            <button type="button" className="btn btn-success">Order!</button>
         </div>
 
     );
