@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useDispatchCart } from './ContextReducer';
+import { useCart, useDispatchCart } from './ContextReducer';
 
 
 
@@ -11,27 +11,49 @@ export default function Body(props) {
   let option = props.options;
   let priceOption = Object.keys(option);
 
+  let data =useCart()
+
   let priceRef = useRef();
 
   const [quantity, setquantity] = useState(1);
   const [size, setsize] = useState("half");
 
-  let finalPrice = quantity*parseInt(option[size]);
+  let finalPrice = quantity * parseInt(option[size]);
   useEffect(() => {
     setsize(priceRef.current.value);
   }, []);
 
   const handleAddToCart = async () => {
+
+    let food = []
+    for (const item of data) {
+      if (item.id === props.foodItem._id) {
+        food = item;
+        break;
+      }
+    }
+    if(food !== []){
+      if (food.size === size){
+        await dispatch({ type: "UPDATE", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity });
+        return
+      }
+      else if(food.size !== size){
+        await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity, size: size });
+        return
+      }
+      return
+    }
     await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity, size: size });
+
     // console.log(quantity);
   };
 
-  const handleDescription = ()=>{
+  const handleDescription = () => {
     alert(`SORRY for Interrupt. The Event is still in progress!`);
-    
+
   };
 
-  
+
 
 
   return (
@@ -66,7 +88,7 @@ export default function Body(props) {
           <hr></hr>
           <div>
             <button className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart}>Add to Cart</button>
-            <button className='btn btn-dark justify-center ms-4 ' onClick={handleDescription}>Description</button>            
+            <button className='btn btn-dark justify-center ms-4 ' onClick={handleDescription}>Description</button>
           </div>
         </div>
       </div>
