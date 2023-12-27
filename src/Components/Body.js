@@ -32,28 +32,25 @@ export default function Body(props) {
         break;
       }
     }
-    if(food != []){
+
+    if(food !== []){
       if (food.size === size){
-        await dispatch({ type: "UPDATE", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity });
+        await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity });
         return
       }
-      else if(food.size !== size){
+      else if (food.size !== size){
         await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity, size: size });
         return
-      }
-      return
-    }
+      };
+      
+    };
     await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity, size: size });
-
-    // console.log(quantity);
   };
 
   const handleDescription = () => {
     alert(`SORRY for Interrupt. The Event is still in progress!`);
 
   };
-
-
 
 
   return (

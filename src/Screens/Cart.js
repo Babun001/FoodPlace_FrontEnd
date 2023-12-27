@@ -5,6 +5,7 @@ import trash from '../ImagesAndIcons/trash1.png'
 export default function Cart() {
 
 
+
     let data = useCart();
     let dispatch = useDispatchCart();
 
@@ -17,6 +18,10 @@ export default function Cart() {
     }
 
     let totalPrice = data.reduce((total, food) => total + food.finalPrice, 0)
+
+    const handleOrder = ()=>{
+        alert ('Restaurants are not Available!');
+      }
 
 
     return (
@@ -52,7 +57,7 @@ export default function Cart() {
                 <h1 className='fs-2 text-white'>Total Price : {totalPrice} /- </h1>
                 
             </div>
-            <button type="button" className="btn btn-success">Order!</button>
+            <button type="button" className="btn btn-success" onClick={handleOrder}>Order!</button>
         </div>
 
     );

@@ -3,8 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import CartLogo from '../ImagesAndIcons/icon.jpg'
 import Model from '../Model';
 import Cart from '../Screens/Cart';
+import { useCart } from './ContextReducer';
 
 export default function NavBar() {
+    let data = useCart();
     const [cartView,setcartView] = useState(false)
     const navigate = useNavigate();
     const handleLogout = () => {
@@ -67,7 +69,7 @@ export default function NavBar() {
                                 <div className='d-flex' style={{ margin: "0px 80px" }}>
                                     <button className="btn border-0 text-white  mx-5 fs-5 position-relative" onClick={()=>setcartView(true)}><img style={{ width: 30, height: 30 }} src={CartLogo} alt="X" />
                                         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success fs-8">
-                                            0
+                                            {data.length}
                                             <span className="visually-hidden">unread messages</span>
                                         </span>
                                     </button>
