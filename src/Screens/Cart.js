@@ -34,13 +34,13 @@ export default function Cart() {
                 order_date: new Date().toDateString()
             })
         });
-        console.log(responce)
+        console.log(data)
         console.log(responce.status)
         if (responce.status === 200){
             dispatch({type: "DROP"})
         }
 
-        alert('Restaurants are not Available!');
+        // alert('Restaurants are not Available!');
     }
 
 
@@ -59,7 +59,7 @@ export default function Cart() {
                         <th style={{ textAlign: 'center' }} scope='col'>Quantity</th>
                         <th style={{ textAlign: 'center' }} scope='col'>Options</th>
                         <th style={{ textAlign: 'center' }} scope='col'>Amount</th>
-                        <th scope='col'></th>
+                        <th style={{ textAlign: 'center' }} scope='col'>Dlt</th>
                     </tr>
                 </thead>
 

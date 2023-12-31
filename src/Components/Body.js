@@ -16,7 +16,7 @@ export default function Body(props) {
   let priceRef = useRef();
 
   const [quantity, setquantity] = useState(1);
-  const [size, setsize] = useState("half");
+  const [size, setsize] = useState("");
 
   let finalPrice = quantity * parseInt(option[size]);
   useEffect(() => {
