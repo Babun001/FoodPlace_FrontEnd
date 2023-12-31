@@ -79,7 +79,7 @@ export default function NavBar() {
                                     {cartView? <Model onClose={()=> setcartView(false)}><Cart /></Model>:null}
 
 
-                                    <Link className="btn text-white bg-danger mx-2" style={{ width: "80px", height: "30px", fontSize: "15px", margin: "9px", padding: "2px" }} onClick={handleLogout}>Log Out</Link>
+                                    <Link className="btn text-white bg-danger mx-2" disabled style={{ width: "80px", height: "30px", fontSize: "15px", margin: "9px", padding: "2px" }} onClick={handleLogout}>Log Out</Link>
                                 </div>
                         }
 

@@ -24,7 +24,6 @@ export default function Body(props) {
   }, []);
 
   const handleAddToCart = async () => {
-
     let food = []
     for (const item of data) {
       if (item.id === props.foodItem._id) {
@@ -32,8 +31,6 @@ export default function Body(props) {
         break;
       }
     }
-
-    alert(String(food.size))
     if (food !== []) {
       if (food.size === size) {
         await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity });
@@ -85,8 +82,8 @@ export default function Body(props) {
           </div>
           <hr></hr>
           <div>
-            <button className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart}>Add to Cart</button>
-            <button className='btn btn-dark justify-center ms-4 ' onClick={handleDescription}>Description</button>
+            <button className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart} >Add to Cart</button>
+            <button className='btn btn-dark justify-center ms-4 ' onClick={handleDescription} disabled>Description</button>
           </div>
         </div>
       </div>

@@ -22,25 +22,26 @@ export default function Cart() {
 
 
     const handleOrder = async () => {
-        let userEmail = localStorage.getItem('userEmail');
-        let responce = await fetch("https://foodplacebackend.onrender.com/api/orderData", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                order_data: data,
-                email: userEmail,
-                order_date: new Date().toDateString()
-            })
-        });
-        console.log(data)
-        console.log(responce.status)
-        if (responce.status === 200){
-            dispatch({type: "DROP"})
-        }
+        alert('Restaurants are not Available!');
 
-        // alert('Restaurants are not Available!');
+        // let userEmail = localStorage.getItem('userEmail');
+        // let responce = await fetch("https://foodplacebackend.onrender.com/api/orderData", {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     },
+        //     body: JSON.stringify({
+        //         order_data: data,
+        //         email: userEmail,
+        //         order_date: new Date().toDateString()
+        //     })
+        // });
+        // console.log(data)
+        // console.log(responce.status)
+        // if (responce.status === 200){
+        //     dispatch({type: "DROP"})
+        // }
+
     }
 
 
@@ -59,7 +60,7 @@ export default function Cart() {
                         <th style={{ textAlign: 'center' }} scope='col'>Quantity</th>
                         <th style={{ textAlign: 'center' }} scope='col'>Options</th>
                         <th style={{ textAlign: 'center' }} scope='col'>Amount</th>
-                        <th style={{ textAlign: 'center' }} scope='col'>Dlt</th>
+                        <th style={{ textAlign: 'center' }} scope='col'></th>
                     </tr>
                 </thead>
 
