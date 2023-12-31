@@ -34,12 +34,13 @@ export default function Cart() {
                 order_date: new Date().toDateString()
             })
         });
+        console.log(responce)
         console.log(responce.status)
         if (responce.status === 200){
             dispatch({type: "DROP"})
         }
 
-        // alert('Restaurants are not Available!');
+        alert('Restaurants are not Available!');
     }
 
 

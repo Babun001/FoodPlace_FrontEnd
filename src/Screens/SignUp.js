@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 export default function SignUp() {
     const [credentials, setcredentials] = useState({ name: "", email: "", password: "", geolocation: "" })
     let navigate = useNavigate()
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -15,10 +17,9 @@ export default function SignUp() {
                 body: JSON.stringify({ name: credentials.name, email: credentials.email, password: credentials.password, location: credentials.Geolocation })
             });
             const json = await responce.json();
-            console.log(json);
-            console.log(credentials.name, credentials.email, credentials.password)
+            
             if (json.success) {
-                // alert(`Welcome to FoodPlace`);
+                alert(`Please LogIn with same Email-Id and Password!`);
                 navigate("/");
             }
             if(!json.success){
@@ -32,7 +33,6 @@ export default function SignUp() {
 
 
     }
-
     const onChange = (event) => {
         setcredentials({ ...credentials, [event.target.name]: event.target.value })
     }
