@@ -70,7 +70,7 @@ export default function NavBar() {
                                     <button className="btn border-0 text-white  mx-5 fs-5 position-relative" onClick={()=>setcartView(true)}><img style={{ width: 30, height: 30 }} src={CartLogo} alt="X" />
                                         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success fs-8">
                                             {data.length}
-                                            <span className="visually-hidden">unread messages</span>
+                                            {/* <span className="visually-hidden">unread messages</span> */}
                                         </span>
                                     </button>
 

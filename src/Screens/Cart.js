@@ -19,10 +19,33 @@ export default function Cart() {
 
     let totalPrice = data.reduce((total, food) => total + food.finalPrice, 0)
 
-    const handleOrder = ()=>{
-        alert ('Restaurants are not Available!');
-      }
 
+
+    const handleOrder = async () => {
+        let userEmail = localStorage.getItem('userEmail');
+        let responce = await fetch("https://foodplacebackend.onrender.com/api/orderData", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                order_data: data,
+                email: userEmail,
+                order_date: new Date().toDateString()
+            })
+        });
+        console.log(responce.status)
+        if (responce.status === 200){
+            dispatch({type: "DROP"})
+        }
+
+        // alert('Restaurants are not Available!');
+    }
+
+
+    const ClearOrder = async () => {
+        await dispatch({type: "DROP"})
+    }
 
     return (
 
@@ -55,8 +78,9 @@ export default function Cart() {
             </table>
             <div>
                 <h1 className='fs-2 text-white'>Total Price : {totalPrice} /- </h1>
-                
+
             </div>
+            <button type="button" className="btn btn-danger" onClick={ClearOrder}>Clear All</button>
             <button type="button" className="btn btn-success" onClick={handleOrder}>Order!</button>
         </div>
 

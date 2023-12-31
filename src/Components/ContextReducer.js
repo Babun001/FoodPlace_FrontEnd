@@ -12,7 +12,7 @@ const reducer = (state, action) => {
             let newArr = [...state]
             newArr.splice(action.index, 1)
             return newArr
-        // case 'UPDATE':
+        // case "UPDATE":
         //     let arr = [...state]
         //     arr.find((food,index) => {
         //         if (food.id === action.id){
@@ -23,9 +23,11 @@ const reducer = (state, action) => {
         //         return arr
         //     })
         //     return arr
-                
+        case "DROP":
+            let Emptyarr = []
+            return Emptyarr                
         default:
-            console.log("error in ContextReducer");
+            console.log("error in ContextReducer.js");
     }
 }
 
