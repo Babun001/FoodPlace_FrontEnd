@@ -46,7 +46,7 @@ export default function Cart() {
 
 
     const ClearOrder = async () => {
-        await dispatch({type: "DROP"})
+        await dispatch({ type: "DROP" })
     }
 
     return (
@@ -82,8 +82,11 @@ export default function Cart() {
                 <h1 className='fs-2 text-white'>Total Price : {totalPrice} /- </h1>
 
             </div>
-            <button type="button" className="btn btn-danger" onClick={ClearOrder}>Clear All</button>
-            <button type="button" className="btn btn-success" onClick={handleOrder}>Order!</button>
+            <div style={{display:'flex', justifyContent: 'space-between'}}>
+                <button type="button" className="btn mx-4 btn-danger" onClick={ClearOrder}>Clear All</button>
+                <button type="button" className="btn me-4  btn-success" onClick={handleOrder}>Order Now</button>
+            </div>
+
         </div>
 
     );
