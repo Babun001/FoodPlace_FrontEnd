@@ -13,16 +13,17 @@ const reducer = (state, action) => {
             newArr.splice(action.index, 1)
             return newArr
         // case "UPDATE":
-        //     let arr = [...state]
-        //     arr.find((food,index) => {
-        //         if (food.id === action.id){
+        //     
+        //     let Arr = [...state]
+        //     Arr.find((food,index) => {
+        //         if (food.id === action.id && food.size === action.size){
         //             console.log(food.quantity, parseInt(action.quantity), action.finalPrice + food.finalPrice)
                         
-        //             arr[index] = {...food, quantity: parseInt(food.quantity) + parseInt(action.quantity) , finalPrice: action.finalPrice + food.finalPrice}
+        //             Arr[index] = {...food, quantity: parseInt(food.quantity) + parseInt(action.quantity) , finalPrice: action.finalPrice + food.finalPrice}
         //         }
-        //         return arr
+        //         return Arr
         //     })
-        //     return arr
+        //     return Arr
         case "DROP":
             let Emptyarr = []
             return Emptyarr                

@@ -51,7 +51,8 @@ export default function NavBar() {
                                             <option value="7">Bombay Cafe</option>
                                             <option value="8">Pool Side Restaurant</option>
                                             <option value="9">Cha Khor</option>
-                                            <option value="10">Sampriti</option>
+                                            <option value="10">Sampriti</option>                                      
+                                            
                                         </select>
                                         : ""
 

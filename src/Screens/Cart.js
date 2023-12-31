@@ -51,7 +51,7 @@ export default function Cart() {
     return (
 
         <div className=' container m-auto mt-5 table-responsive table-responsive-sm table-responsive-md'>
-            <table className="table table-striped">
+            <table className="table table-striped overflow-auto">
                 <thead className='text-success fs-4'>
                     <tr>
                         <th scope='col'>#</th>

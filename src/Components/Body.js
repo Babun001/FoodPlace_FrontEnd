@@ -11,7 +11,7 @@ export default function Body(props) {
   let option = props.options;
   let priceOption = Object.keys(option);
 
-  let data =useCart()
+  let data = useCart()
 
   let priceRef = useRef();
 
@@ -33,22 +33,23 @@ export default function Body(props) {
       }
     }
 
-    if(food !== []){
-      if (food.size === size){
+    alert(String(food.size))
+    if (food !== []) {
+      if (food.size === size) {
         await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity });
         return
       }
-      else if (food.size !== size){
+      else if (food.size !== size) {
         await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity, size: size });
         return
       };
-      
+
     };
     await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity, size: size });
   };
 
   const handleDescription = () => {
-    alert(`SORRY for Interrupt. The Event is still in progress!`);
+    alert(props.foodItem.description);
 
   };
 
