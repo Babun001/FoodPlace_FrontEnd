@@ -42,16 +42,16 @@ export default function NavBar() {
                                     (localStorage.getItem("authToken"))
                                         ? <select className="form-select bg-dark text-white mx-3 form-select-sm fs-5" style={{ width: "250px", height: "35px", border: "none", margin: "4px" }} aria-label="Disabled select example">
                                             <option defaultValue>Select Restaurant</option>
-                                            <option value="1">Restaurant Nisha</option>
-                                            <option value="2">Haji Biryani</option>
-                                            <option value="3">Kushari Restaurant</option>
-                                            <option value="4">Wifi</option>
-                                            <option value="6">Bypass Dhaba</option>
-                                            <option value="5">Pach Foron</option>
-                                            <option value="7">Bombay Cafe</option>
-                                            <option value="8">Pool Side Restaurant</option>
-                                            <option value="9">Cha Khor</option>
-                                            <option value="10">Sampriti</option>
+                                            <option value="1" disabled>Restaurant Nisha</option>
+                                            <option value="2" disabled>Haji Biryani</option>
+                                            <option value="3" disabled>Kushari Restaurant</option>
+                                            <option value="4" disabled>Wifi</option>
+                                            <option value="6" disabled>Bypass Dhaba</option>
+                                            <option value="5" disabled>Pach Foron</option>
+                                            <option value="7" disabled>Bombay Cafe</option>
+                                            <option value="8" disabled>Pool Side Restaurant</option>
+                                            <option value="9" disabled>Cha Khor</option>
+                                            <option value="10" disabled>Sampriti</option>
 
                                         </select>
                                         : ""
