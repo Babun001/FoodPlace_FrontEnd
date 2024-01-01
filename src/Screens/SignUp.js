@@ -21,7 +21,7 @@ export default function SignUp() {
             if (json.success) {
                 alert(`Hey! Myself Babun the developer of this site! I would like to draw your attention that this site is not yet ready for mobile phone users!`);
                 alert(`Please LogIn with same Email-Id and Password!`);
-                navigate("/");
+                navigate("/login");
             }
             if(!json.success){
                 alert("Enter Valid Credentials!");
@@ -61,45 +61,14 @@ export default function SignUp() {
                         </symbol>
                     </svg>
 
-                    {/* <div className="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-                    <button className="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
-                        <svg className="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-                        <span className="visually-hidden" id="bd-theme-text">Toggle theme</span>
-                    </button>
-                    <ul className="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text" >
-                        <li>
-                            <button type="button" className="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                                <svg className="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-                                Light
-                                <svg className="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" className="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                                <svg className="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-                                Dark
-                                <svg className="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" className="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                                <svg className="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
-                                Auto
-                                <svg className="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                            </button>
-                        </li>
-                    </ul>
-                </div> */}
-
-
                     <main className="form-signin w-100 m-auto">
                         <form onSubmit={handleSubmit}>
                             {/* <img className="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" /> */}
                             <h2 className='h3 text-white ' style={{ "marginLeft": "10px" }}>Welcome to FoodPlace</h2>
                             <h1 className="h5 mt-3 fw-normal blockquote-footer">Please sign in </h1>
                             <div className="form-floating">
-                                <input type="text" className="form-control" id="floatingInputt" placeholder="name" autoComplete='off' name='name' value={credentials.name} onChange={onChange} />
-                                <label htmlFor="floatingInputt">Name</label>
+                                <input type="text" className="form-control" id="floatingInputt" placeholder="Name" autoComplete='off' name='name' value={credentials.name} onChange={onChange} />
+                                <label htmlFor="floatingInputt">Name (more than 3 characters)</label>
                             </div>
                             <div className="form-floating">
                                 <input type="email" className="form-control" id="floatingInput" autoComplete='off' placeholder="name@example.com" name='email' value={credentials.email} onChange={onChange} />

@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useCart, useDispatchCart } from './ContextReducer';
 
-
-
-
 export default function Body(props) {
 
   // let dta = useCart();
@@ -83,7 +80,7 @@ export default function Body(props) {
           <hr></hr>
           <div>
             <button className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart} >Add to Cart</button>
-            <button className='btn btn-dark justify-center ms-4 ' onClick={handleDescription} disabled>Description</button>
+            <button className='btn btn-dark justify-center ms-4 ' onClick={handleDescription} >Description</button>
           </div>
         </div>
       </div>

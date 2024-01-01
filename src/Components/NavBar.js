@@ -7,7 +7,7 @@ import { useCart } from './ContextReducer';
 
 export default function NavBar() {
     let data = useCart();
-    const [cartView,setcartView] = useState(false)
+    const [cartView, setcartView] = useState(false)
     const navigate = useNavigate();
     const handleLogout = () => {
         localStorage.removeItem("authToken");
@@ -51,8 +51,8 @@ export default function NavBar() {
                                             <option value="7">Bombay Cafe</option>
                                             <option value="8">Pool Side Restaurant</option>
                                             <option value="9">Cha Khor</option>
-                                            <option value="10">Sampriti</option>                                      
-                                            
+                                            <option value="10">Sampriti</option>
+
                                         </select>
                                         : ""
 
@@ -68,15 +68,15 @@ export default function NavBar() {
                                 </div>
                                 :
                                 <div className='d-flex' style={{ margin: "0px 80px" }}>
-                                    <button className="btn border-0 text-white  mx-5 fs-5 position-relative" onClick={()=>setcartView(true)}><img style={{ width: 30, height: 30 }} src={CartLogo} alt="X" />
+                                    <button className="btn border-0 text-white  mx-5 fs-5 position-relative" onClick={() => setcartView(true)}><img style={{ width: 30, height: 30 }} src={CartLogo} alt="X" />
                                         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success fs-8">
                                             {data.length}
                                             {/* <span className="visually-hidden">unread messages</span> */}
                                         </span>
                                     </button>
 
-                                    
-                                    {cartView? <Model onClose={()=> setcartView(false)}><Cart /></Model>:null}
+
+                                    {cartView ? <Model onClose={() => setcartView(false)}><Cart /></Model> : null}
 
 
                                     <Link className="btn text-white bg-danger mx-2" disabled style={{ width: "80px", height: "30px", fontSize: "15px", margin: "9px", padding: "2px" }} onClick={handleLogout}>Log Out</Link>
