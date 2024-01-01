@@ -78,10 +78,21 @@ export default function Body(props) {
             </div>
           </div>
           <hr></hr>
-          <div>
+          {
+            (localStorage.getItem("authToken"))
+              ? <div>
+                <button className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart} >Add to Cart</button>
+                <button className='btn btn-dark justify-center ms-4' onClick={handleDescription}>Description</button>
+              </div>
+              : <div>
+                <button className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart} disabled>Add to Cart</button>
+                <button className='btn btn-dark justify-center ms-4' onClick={handleDescription} disabled>Description</button>
+              </div>
+          }
+          {/* <div>
             <button className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart} >Add to Cart</button>
             <button className='btn btn-dark justify-center ms-4' onClick={handleDescription}>Description</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div >
