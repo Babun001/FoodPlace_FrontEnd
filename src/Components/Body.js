@@ -43,7 +43,7 @@ export default function Body(props) {
   };
 
   const handleDescription = () => {
-    alert(props.foodItem.description);
+    console.log(props.foodItem.description);
   }
 
 
@@ -79,7 +79,7 @@ export default function Body(props) {
           <hr></hr>
           <div>
             <button className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart} >Add to Cart</button>
-            <button className='btn btn-dark justify-center ms-4' data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content={handleDescription} >Description</button>
+            <button className='btn btn-dark justify-center ms-4' onClick={handleDescription}>Description</button>
           </div>
         </div>
       </div>
