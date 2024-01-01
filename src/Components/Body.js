@@ -49,7 +49,7 @@ export default function Body(props) {
 
 
   return (
-    <div>
+    <div className=''>
       <div className="card mt-3" style={{ "maxHeight": "360px", "width": "18rem" }}>
         <img src={props.foodItem.img} alt="..." style={{ height: "180px", objectFit: "fill" }}></img>
         <div className="card-body">

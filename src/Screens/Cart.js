@@ -49,12 +49,12 @@ export default function Cart() {
     const ClearOrder = async () => {
         await dispatch({ type: "DROP" })
     }
-
+    // table-responsive table-responsive-sm table-responsive-md
     return (
         <div>
-            <div className=' container m-auto mt-1 table-responsive table-responsive-sm table-responsive-md' style={{ overflowX: "hidden", height: "40vh" }}>
+            <div className='container m-auto mt-1 table-responsive table-responsive-sm table-responsive-md' style={{ overflowX: "hidden", height: "40vh" }}>
                 <table className="table table-striped table-responsive overflow-x: auto ">
-                    <thead className='text-success fs-4'>
+                    <thead className='fs-5'>
                         <tr>
                             <th scope='col'>#</th>
                             <th scope='col'>Name</th>

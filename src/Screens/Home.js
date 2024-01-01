@@ -42,7 +42,7 @@ export default function Home() {
           <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ objectFit: "contain" }}>
             <div className="carousel-inner" id='carusal' style={{ maxHeight: "500px", }}>
               {/* Search Bar properties */}
-              <div className='carousel-caption d-none d-md-block' style={{ zIndex: "10" }}>
+              <div className='container carousel-caption d-none d-md-block' style={{ zIndex: "10" }}>
                 <div className="d-flex justify-content-center">
                   <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e) => { setsearch(e.target.value) }} />
                   {/* <span className='clear'>x</span> */}
