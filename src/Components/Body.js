@@ -49,8 +49,8 @@ export default function Body(props) {
 
 
   return (
-    <div className=''>
-      <div className="card mt-3" style={{ "maxHeight": "360px", "width": "18rem" }}>
+    <div>
+      <div id='card' className="card mt-3 "  style={{ "maxHeight": "360px", "width": "18rem" }}>
         <img src={props.foodItem.img} alt="..." style={{ height: "180px", objectFit: "fill" }}></img>
         <div className="card-body">
           <h4 className="card-title">{props.foodItem.name} </h4>
