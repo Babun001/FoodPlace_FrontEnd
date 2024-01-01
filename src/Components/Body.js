@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useCart, useDispatchCart } from './ContextReducer';
+// import Description from './Description';
 
 export default function Body(props) {
 
@@ -43,7 +44,8 @@ export default function Body(props) {
   };
 
   const handleDescription = () => {
-    console.log(props.foodItem.description);
+    // alert(props.foodItem.description);
+    alert(`Description is not ready yet!`)
   }
 
 
