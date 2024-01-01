@@ -12,7 +12,7 @@ export default function connect() {
                         <img src={AppImage} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" style={{ borderRadius: "20px" }} />
                     </div>
                     <div className="col-lg-6">
-                        <h1 className="display-5 fw-bold lh-1 mb-3 text-white">Connect </h1>
+                        <h1 className="display-5 fw-bold lh-1 mb-3 text-white">Connects </h1>
 
                         <div className='m-1 mb-3'>
                             <Link className='m-3' to='https://www.facebook.com/babun.roy.1428'>
