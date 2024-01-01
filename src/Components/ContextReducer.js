@@ -13,20 +13,21 @@ const reducer = (state, action) => {
             newArr.splice(action.index, 1)
             return newArr
         // case "UPDATE":
-        //     
+
         //     let Arr = [...state]
-        //     Arr.find((food,index) => {
-        //         if (food.id === action.id && food.size === action.size){
+        //     Arr.find((food, index) => {
+        //         if (food.id === action.id && food.size === action.size) {
         //             console.log(food.quantity, parseInt(action.quantity), action.finalPrice + food.finalPrice)
-                        
-        //             Arr[index] = {...food, quantity: parseInt(food.quantity) + parseInt(action.quantity) , finalPrice: action.finalPrice + food.finalPrice}
+
+        //             Arr[index] = { ...food, quantity: parseInt(food.quantity) + parseInt(action.quantity), finalPrice: action.finalPrice + food.finalPrice }
         //         }
         //         return Arr
         //     })
         //     return Arr
+
         case "DROP":
             let Emptyarr = []
-            return Emptyarr                
+            return Emptyarr
         default:
             console.log("error in ContextReducer.js");
     }
