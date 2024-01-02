@@ -33,14 +33,14 @@ export default function NavBar() {
                             {
                                 (localStorage.getItem("authToken"))
                                     ? <li>
-                                        <Link className='nav-link active fs-5 ' aria-current='page' to={""}disabled>My Orders</Link>
+                                        <Link className='nav-link active fs-5 mx-2' aria-current='page' to={""}disabled>My Orders</Link>
                                     </li>
                                     : ""
                             }
                             <div className='navbar-nav me-auto'>
                                 {
                                     (localStorage.getItem("authToken"))
-                                        ? <select className="form-select bg-dark text-white mx-3 form-select-sm fs-5" style={{ width: "250px", height: "35px", border: "none", margin: "4px" }} aria-label="Disabled select example">
+                                        ? <select className="form-select bg-dark text-start mx-2 text-white  form-select-sm fs-5" style={{ width: "250px", height: "", border: "1px solid orange", margin: "4px" }} aria-label="Disabled select example">
                                             <option defaultValue>Select Restaurant</option>
                                             <option value="1" disabled>Restaurant Nisha</option>
                                             <option value="2" disabled>Haji Biryani</option>
@@ -58,6 +58,7 @@ export default function NavBar() {
 
                                 }
                             </div>
+                            
                         </ul>
                         {
                             (!localStorage.getItem("authToken"))
@@ -67,8 +68,8 @@ export default function NavBar() {
                                     <Link className="nav-link text-white mx-2 opacity-75 fs-5" to="/Signup">Sign Up</Link>
                                 </div>
                                 :
-                                <div className='d-flex' style={{ margin: "0px 80px" }}>
-                                    <button className="btn border-0 text-white  mx-5 fs-5 position-relative" onClick={() => setcartView(true)}><img style={{ width: 30, height: 30 }} src={CartLogo} alt="X" />
+                                <div className='d-flex ' style={{ margin: "" }}>
+                                    <button className="btn border-0 text-white me-4 mt-4 fs-5  position-relative" onClick={() => setcartView(true)}><img style={{ width: 30, height: 30 }} src={CartLogo} alt="X" />
                                         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success fs-8">
                                             {data.length}
                                             {/* <span className="visually-hidden">unread messages</span> */}
@@ -79,7 +80,7 @@ export default function NavBar() {
                                     {cartView ? <Model onClose={() => setcartView(false)}><Cart /></Model> : null}
 
 
-                                    <Link className="btn text-white bg-danger mx-2" disabled style={{ width: "80px", height: "30px", fontSize: "15px", margin: "9px", padding: "2px" }} onClick={handleLogout}>Log Out</Link>
+                                    <Link className="btn text-white mt-5 ms-4 bg-danger" disabled style={{ width: "80px", height: "30px", fontSize: "15px", margin: "9px", padding: "2px" }} onClick={handleLogout}>Log Out</Link>
                                 </div>
                         }
 

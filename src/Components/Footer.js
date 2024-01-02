@@ -13,9 +13,9 @@ export default function Footer() {
           <span className="text-white">© 2023 FoodPlace, Inc</span>
           
         </div>
-        <div className='mx-4'>
-            <Link className='btn mx-2 text-white'  to='/about'>AboutMe</Link>
-            <Link className='btn mx-2 text-white' to='/connectMe '>Contact</Link>
+        <div className='mx-2'>
+            <Link className='btn text-white'  to='/about'>AboutMe</Link>
+            <Link className='btn text-white' to='/connectMe '>Contacts</Link>
           </div>
       </footer>
     </div>
