@@ -33,14 +33,14 @@ export default function NavBar() {
                             {
                                 (localStorage.getItem("authToken"))
                                     ? <li>
-                                        <Link className='nav-link active fs-5 mx-3' aria-current='page' to={""}disabled>My Orders</Link>
+                                        <Link className='nav-link active fs-5 mx-3' aria-current='page' to={""} disabled>My Orders</Link>
                                     </li>
                                     : ""
                             }
                             <div className='navbar-nav me-auto'>
                                 {
                                     (localStorage.getItem("authToken"))
-                                        ? <select className="form-select bg-dark text-start mx-2  text-white  form-select-sm fs-5" style={{ width: "250px", height: "", border: "none", margin: "4px" }} aria-label="Disabled select example">
+                                        ? <select className="form-select bg-dark text-start mx-2  text-white  form-select-sm fs-5" style={{ width: "200px", height: "", border: "none", margin: "4px" }} aria-label="Disabled select example">
                                             <option defaultValue>Select Restaurant</option>
                                             <option value="1" disabled>Restaurant Nisha</option>
                                             <option value="2" disabled>Haji Biryani</option>
@@ -58,21 +58,26 @@ export default function NavBar() {
 
                                 }
                             </div>
+                            <div className='mx-2'>
+                                <Link className='btn text-white fs-5' to='/about'>AboutMe</Link>
+                            </div>
+                            <div className='mx-2'>
+                                <Link className='btn text-white fs-5' to='/connectMe '>Contacts</Link>
+                            </div>
 
                         </ul>
                         {
                             (!localStorage.getItem("authToken"))
-                                ? <div className='d-flex mt-3 mb-4' style={{ margin: "" }}>
+                                ? <div className='d-flex mt-3 mb-4'>
                                     <Link className="nav-link text-white mx-1 opacity-75 fs-5" to="/Login">Log In</Link>
                                     <span className=' text-white mx-2 opacity-75 user-select-none fs-5' >/</span>
                                     <Link className="nav-link text-white mx-2 opacity-75 fs-5" to="/Signup">Sign Up</Link>
                                 </div>
                                 :
-                                <div className='d-flex ' style={{ margin: "" }}>
+                                <div className='d-flex '>
                                     <button className="btn border-0 text-white mx-2 me-4 mt-4 fs-5  position-relative" onClick={() => setcartView(true)}><img style={{ width: 30, height: 30 }} src={CartLogo} alt="X" />
                                         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success fs-8">
                                             {data.length}
-                                            {/* <span className="visually-hidden">unread messages</span> */}
                                         </span>
                                     </button>
 
