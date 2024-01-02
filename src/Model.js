@@ -10,7 +10,7 @@ const MODAL_STYLES = {
   zIndex: 1000,
   height: '60%',
   width: '60%'
-  
+
 }
 
 const OVERLAY_STYLES = {
@@ -29,7 +29,7 @@ export default function Modal({ children, onClose }) {
     <>
       <div style={OVERLAY_STYLES} />
       <div style={MODAL_STYLES}>
-        <button className='btn bg-danger  fs-6' style={{ marginLeft: "1105px", marginTop: "10px" }} onClick={onClose}> X </button>
+        <button className='btn bg-danger fs-6 me-3 mt-2 float-end' onClick={onClose}> X </button>
         {children}
       </div>
     </>,
