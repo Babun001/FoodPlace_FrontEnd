@@ -6,8 +6,8 @@ import AppImage from '../ImagesAndIcons/vegetable.jpeg';
 export default function connect() {
     return (
         <>
-            <div className="bg-dark col-xxl-8 px-4 py-5" style={{ height: "100vh", display: "" }}>
-                <div className=" row flex-lg-row-reverse align-items-center g-5 py-5" style={{ margin: "0px 60px" }}>
+            <div className="container d-flex bg-dark col-xxl-8 px-4 py-5 " style={{ height: "100vh" }}>
+                <div className=" row flex-lg-row-reverse align-items-center g-5 py-5 mx-5">
                     <div className="col-10 col-sm-10 col-lg-6">
                         <img src={AppImage} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" style={{ borderRadius: "20px" }} />
                     </div>
