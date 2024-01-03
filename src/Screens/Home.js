@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NavBar from '../Components/NavBar';
 import Body from '../Components/Body';
 import Footer from '../Components/Footer';
+// import { useNavigate } from 'react-router-dom';
 // import CartLogo from '../ImagesAndIcons/icon.jpg'
 // import Carousal from '../Components/Carousal';
 
@@ -10,6 +11,8 @@ export default function Home() {
   const [search, setsearch] = useState('');
   const [foodCat, setfoodCat] = useState([]);
   const [foodItem, setfoodItem] = useState([]);
+
+  // let navigate = useNavigate()
 
   const loadData = async () => {
     let response = await fetch("https://foodplacebackend.onrender.com/api/foodData", {
@@ -32,10 +35,10 @@ export default function Home() {
     loadData()
   }, [])
 
-  const ClearField = () => {
-    document.getElementById('input').value=''
-    
-  }
+  // const ClearField = () => {
+  //   document.getElementById('input').value=''
+  //   // navigate("/")
+  // }
 
 
   return (
@@ -49,8 +52,8 @@ export default function Home() {
               <div className='carousel-caption' style={{ zIndex: "10" }}>
                 <div className="d-flex justify-content-center">
                   <input  id='input' className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e) => { setsearch(e.target.value) }} />
-                  <button className="btn border-white rounded bg-none text-dark" type="submit" onClick={ClearField}>X</button>
-                  {/* <i class="bi bi-search"></i> */}
+                  {/* <button className="btn border-white rounded bg-none text-dark" type="submit" onClick={ClearField}>X</button>
+                  <i class="bi bi-search"></i> */}
                 </div>
               </div>
 
