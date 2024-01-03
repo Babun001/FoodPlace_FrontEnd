@@ -75,7 +75,7 @@ export default function NavBar() {
                                 </div>
                                 :
                                 <div className='d-flex '>
-                                    <button className="btn border-0 text-white mx-2 me-4 mt-4 fs-5  position-relative" onClick={() => setcartView(true)}><img style={{ width: 30, height: 30 }} src={CartLogo} alt="X" />
+                                    <button className="btn border-0 text-white mx-2 me-4 mt-4 fs-5  position-relative" onClick={() => setcartView(true)}><img style={{ width: 30, height: 30 }} src={CartLogo} alt="CartIcon"/>
                                         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success fs-8">
                                             {data.length}
                                         </span>
