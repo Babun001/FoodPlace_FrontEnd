@@ -75,8 +75,8 @@ export default function Home() {
       <div className='container text-white '>
         {
           foodCat && foodCat.map((data, pos) => {
-              return (<div className='row mb-3' key={pos}>
-                <div key={data._id} className='fs-3 m-3'>
+              return (<div className='row mx-2 ' key={pos}>
+                <div key={data._id} className=' fs-3 m-3'>
                   {data.CategoryName}
                 </div>
                 <hr />
@@ -84,7 +84,7 @@ export default function Home() {
                   foodItem && foodItem.filter((item) => item.CategoryName === data.CategoryName && item.name.toLowerCase().includes(search.toLowerCase()))
                       .map(filterItems => {
                         return (
-                          <div key={filterItems._id} className='col-12 col-md-6 col-xl-3'>
+                          <div key={filterItems._id} className='d-flex justify-content-center col-12 col-md-6 col-xl-3'>
                             <Body foodItem = {filterItems}
                               options={filterItems.options[0]}
                               imgSrc={filterItems.img}></Body>
