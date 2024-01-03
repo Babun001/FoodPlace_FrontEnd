@@ -19,7 +19,7 @@ export default function SignUp() {
             const json = await responce.json();
             
             if (json.success) {
-                alert(`Hey! Myself Babun the developer of this site! I would like to draw your attention that this site is not yet ready for mobile phone users!`);
+                alert(`Hey! Myself Babun the developer of this site! I would like to draw your attention that this site is in Testing phase!`);
                 alert(`Please LogIn with same Email-Id and Password!`);
                 navigate("/login");
             }
