@@ -73,7 +73,7 @@ export default function Cart() {
                                 <td>{food.quantity}</td>
                                 <td>{food.size}</td>
                                 <td>{food.finalPrice}</td>
-                                <td> <img src={trash} alt='Delete' onClick={() => { dispatch({ type: "REMOVE", index: index }) }} /></td>
+                                <td> <img className='' style={{width: "3vh"}} src={trash} alt='Delete' onClick={() => { dispatch({ type: "REMOVE", index: index }) }} /></td>
                             </tr>
                         ))}
                     </tbody>
