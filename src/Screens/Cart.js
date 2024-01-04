@@ -52,10 +52,10 @@ export default function Cart() {
     // table-responsive table-responsive-sm table-responsive-md
     return (
         <div>
-            <div className='container m-auto mt-1 table-responsive table-responsive-sm table-responsive-md' style={{ overflowX: "hidden", height: "40vh" }}>
-                <table className="table table-striped table-responsive overflow-x: auto ">
+            <div className='container mt-5' style={{ overflowX: "hidden", height: "35vh" }}>
+                <table className="table table-striped table-responsive table-hover text-center text-capitalize">
                     <thead className='fs-5'>
-                        <tr>
+                        <tr className='table-success table-active text-white'>
                             <th scope='col'>#</th>
                             <th scope='col'>Name</th>
                             <th style={{ textAlign: 'center' }} scope='col'>Quantity</th>
