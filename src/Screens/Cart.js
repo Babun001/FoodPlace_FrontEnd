@@ -1,6 +1,6 @@
 import React from 'react';
 import { useCart, useDispatchCart } from '../Components/ContextReducer';
-import trash from '../ImagesAndIcons/trash1.png'
+import trash from '../ImagesAndIcons/trash2.1.png'
 
 export default function Cart() {
 
@@ -52,16 +52,16 @@ export default function Cart() {
     // table-responsive table-responsive-sm table-responsive-md
     return (
         <div>
-            <div className='container mt-5' style={{ overflowX: "hidden", height: "35vh" }}>
+            <div className='container table-responsive col-lg-12 mt-5' style={{ overflowX: "scroll", height: "35vh" }}>
                 <table className="table table-striped table-responsive table-hover text-center text-capitalize">
-                    <thead className='fs-5'>
+                    <thead className='fs-6'>
                         <tr className='table-success table-active text-white'>
-                            <th scope='col'>#</th>
+                            <th className='' scope='col'>#</th>
                             <th scope='col'>Name</th>
-                            <th style={{ textAlign: 'center' }} scope='col'>Quantity</th>
-                            <th style={{ textAlign: 'center' }} scope='col'>Options</th>
-                            <th style={{ textAlign: 'center' }} scope='col'>Amount</th>
-                            <th style={{ textAlign: 'center' }} scope='col'></th>
+                            <th scope='col'>Quantity</th>
+                            <th scope='col'>Options</th>
+                            <th scope='col'>Amount</th>
+                            <th scope='col'>Dlt</th>
                         </tr>
                     </thead>
 
@@ -70,11 +70,10 @@ export default function Cart() {
                             <tr>
                                 <th scope='row'> {index + 1} </th>
                                 <td>{food.name}</td>
-                                <td style={{ textAlign: 'center' }}>{food.quantity}</td>
-                                <td style={{ textAlign: 'center' }}>{food.size}</td>
-                                <td style={{ textAlign: 'center' }}>{food.finalPrice}</td>
-                                <td><button type='button' className='btn p-0 m-0' style={{ 'height': '30px', 'display': 'flex', "justifyContent": 'end' }}><img src={trash} alt='Delete' onClick={() => { dispatch({ type: "REMOVE", index: index }) }} /></button></td>
-
+                                <td>{food.quantity}</td>
+                                <td>{food.size}</td>
+                                <td>{food.finalPrice}</td>
+                                <td> <img src={trash} alt='Delete' onClick={() => { dispatch({ type: "REMOVE", index: index }) }} /></td>
                             </tr>
                         ))}
                     </tbody>
