@@ -52,7 +52,7 @@ export default function Cart() {
     // table-responsive table-responsive-sm table-responsive-md
     return (
         <div>
-            <div className='container table-responsive col-lg-12 mt-5' style={{ overflowX: "hidden", height: "35vh" }}>
+            <div className='container table-responsive col-lg-12 mt-5' style={{ overflowX: "scroll", height: "35vh" }}>
                 <table className="table table-striped table-responsive table-hover text-center text-capitalize">
                     <thead className='fs-6'>
                         <tr className='table-success table-active text-white'>
@@ -81,12 +81,12 @@ export default function Cart() {
 
             </div>
             <div>
-                <h1 className='fs-2 mx-4 text-white'>Total Price : {totalPrice} /- </h1>
+                <h1 className='fs-3 mx-4 text-white'>Total Price : {totalPrice} /- </h1>
 
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <button type="button" className="btn mx-4 btn-danger" onClick={ClearOrder}>Clear All</button>
-                <button type="button" className="btn me-4  btn-success" onClick={handleOrder}>Order Now</button>
+            <div  className=''>
+                <button type="button" className="btn float-start mx-2 btn-danger" onClick={ClearOrder}>Clear All</button>
+                <button type="button" className="btn float-end me-2 btn-success" onClick={handleOrder}>Order Now</button>
             </div>
         </div>
 

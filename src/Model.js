@@ -8,8 +8,8 @@ const MODAL_STYLES = {
   backgroundColor: 'rgb(34,34,34)',
   transform: 'translate(-50%, -50%)',
   zIndex: 1000,
-  height: '60%',
-  width: '60%'
+  height: '65%',
+  width: '80%'
 
 }
 
