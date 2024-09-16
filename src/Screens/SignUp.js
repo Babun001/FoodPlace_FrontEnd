@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import './screen.css';
 
 export default function SignUp() {
     const [credentials, setcredentials] = useState({ name: "", email: "", password: "", geolocation: "" })

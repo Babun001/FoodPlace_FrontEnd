@@ -1,4 +1,5 @@
 import React from 'react';
+// import img1 from '../ImagesAndIcons/img1.jpg';
 
 export default function Carousal() {
     return (
@@ -15,13 +16,13 @@ export default function Carousal() {
 
                     {/* Carousel images */}
                     <div className="carousel-item active">
-                        <img src="https://source.unsplash.com/random/900x700/?Pizza" className="d-block w-100" style={{ filter: "brightness(30%)" }} alt='...' />
+                        <img src={img1} className="d-block w-100" style={{ filter: "brightness(30%)" }} alt='...' />
                     </div>
                     <div className="carousel-item">
-                        <img src="https://source.unsplash.com/random/900x700/?Burger" className="d-block w-100" style={{ filter: "brightness(30%)" }} alt='...' />
+                        <img src={img1} className="d-block w-100" style={{ filter: "brightness(30%)" }} alt='...' />
                     </div>
                     <div className="carousel-item">
-                        <img src="https://source.unsplash.com/random/900x700/?soup" className="d-block w-100" style={{ filter: "brightness(30%)" }} alt='...' />
+                        <img src={img1} className="d-block w-100" style={{ filter: "brightness(30%)" }} alt='...' />
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
