@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useCart, useDispatchCart } from './ContextReducer';
 // import Description from './Description';
 
+
 export default function Body(props) {
 
   // let dta = useCart();
@@ -22,7 +23,7 @@ export default function Body(props) {
   }, []);
 
   const handleAddToCart = async () => {
-    let food = []
+    let food = [];
     for (const item of data) {
       if (item.id === props.foodItem._id) {
         food = item;
@@ -50,12 +51,12 @@ export default function Body(props) {
 
   return (
     <div>
-      <div id='card' className="card mt-3 "  style={{ "maxHeight": "360px", "width": "18rem" }}>
+      <div id='card' className="card mt-3"  style={{display:"flex", "maxHeight": "360px", "width": "18rem" }}>
         <img src={props.foodItem.img} alt="..." style={{ height: "180px", objectFit: "fill" }}></img>
-        <div className="card-body">
+        <div className="card-body ">
           <h4 className="card-title">{props.foodItem.name} </h4>
-          <div className='container w-100'>
-            <select className='m-2 h-100 text-white font-weight-bold bg-dark rounded' onChange={(e) => setquantity(e.target.value)}>
+          <div id='options' className='container w-100'>
+            <select id='quentity' className='m-2 h-100 text-white font-weight-bold bg-dark rounded' onChange={(e) => setquantity(e.target.value)}>
               {Array.from(Array(9), (e, i) => {
                 return (
                   <option key={i + 1} value={i + 1}>{i + 1}</option>
@@ -80,13 +81,13 @@ export default function Body(props) {
           <hr></hr>
           {
             (localStorage.getItem("authToken"))
-              ? <div>
-                <button className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart} >Add to Cart</button>
-                <button className='btn btn-dark justify-center ms-4' onClick={handleDescription}>Description</button>
+              ? <div id='buttons'>
+                <button id='AddtoCart' className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart} >Add to Cart</button>
+                <button id='Description' className='btn btn-dark justify-center ms-4' onClick={handleDescription}>Description</button>
               </div>
-              : <div>
-                <button className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart} disabled>Add to Cart</button>
-                <button className='btn btn-dark justify-center ms-4' onClick={handleDescription} disabled>Description</button>
+              : <div id='buttons'>
+                <button id='AddtoCart' className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart} disabled>Add to Cart</button>
+                <button id='Description' className='btn btn-dark justify-center ms-4' onClick={handleDescription} disabled>Description</button>
               </div>
           }
           {/* <div>

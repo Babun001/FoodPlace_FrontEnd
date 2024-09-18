@@ -13,7 +13,7 @@ export default function about() {
                     <div className="col-lg-6">
                         <h3 className="display-5 fw-bold lh-1 mb-3 text-white">About Me</h3>
                         <h1 className="display-5 fw-bold lh-1 mb-3 text-white">Hi, I'm Babun Roy</h1>
-                        <p className="lead text-white fs-3">Pursuing Masters at Meghnad Saha Institute Of Technology(MSIT)</p>
+                        <p className="lead text-white fs-3">A Software Engineer</p>
                         <p className="lead text-white">Feel free to explore the rest of the website and don't hesitate to contact me if you have any questions or just want to say hello!</p>
                         <div className="d-grid gap-2 d-md-flex justify-content-md-start">
                             <Link to="/connectMe" className="btn btn-info btn-lg px-4 me-md-2">Connect Me..</Link>

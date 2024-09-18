@@ -3,9 +3,53 @@
 }
 
 @media only screen and (max-width: 365px) {
-  #t1,
-  #t2 {
+  #t1{
     /* background-color: red; */
     font-size: small;
   }
+  #t2 :link {
+    font-size: small;
+  }
+}
+
+@media only screen and (max-width: 1400px){
+  #card{
+    max-width: 16rem;
+  }
+  #AddtoCart, #Description{
+    height: 3rem;
+    width: 5.8rem;
+    font-size: small;
+  }
+  #options{
+    display: contents;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  #card{
+    max-width: 9rem;
+    /* height: 18rem; */
+  }
+  .card-title{
+    font-size: medium;
+    font-weight: 700;
+    margin-bottom: 2px;
+    /* background-color: red; */
+  }
+  #AddtoCart, #Description{
+    height: 2rem;
+    width: 100%;
+    font-size: small;
+  }
+  #options{
+    /* display: flex; */
+  }
+  #card img{
+    max-height: 110px;
+  }
+  #card .card-body{
+    padding: 2px;
+  }
+  
 }
