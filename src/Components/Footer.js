@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './style.css';
 
 export default function Footer() {
   return (
@@ -10,10 +11,10 @@ export default function Footer() {
         <div className="col-md-4 d-flex align-items-center">
           <Link href="/" className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
           </Link>
-          <span className="text-white">© 2023 FoodPlace, Inc</span>
+          <span id='t1' className="text-white">© 2023 FoodPlace, Inc</span>
           
         </div>
-        <div className='mx-2'>
+        <div id='t2' className='mx-2'>
             <Link className='btn text-white'  to='/about'>AboutMe</Link>
             <Link className='btn text-white' to='/connectMe '>Contacts</Link>
           </div>

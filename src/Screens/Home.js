@@ -6,6 +6,10 @@ import Footer from '../Components/Footer';
 // import CartLogo from '../ImagesAndIcons/icon.jpg'
 // import Carousal from '../Components/Carousal';
 
+import img1 from '../ImagesAndIcons/img1.jpg'
+import img2 from '../ImagesAndIcons/img2.jpg'
+import img3 from '../ImagesAndIcons/img3.jpg'
+
 export default function Home() {
 
   const [search, setsearch] = useState('');
@@ -59,13 +63,13 @@ export default function Home() {
 
               {/* Carousel images */}
               <div className="carousel-item active">
-                <img src="https://source.unsplash.com/random/900x700/?Pizza" className="d-block w-100" style={{ filter: "brightness(30%)" }} alt='...' />
+                <img src={img1} className="d-block w-100" style={{ filter: "brightness(30%)" }} alt='carouselImage' />
               </div>
               <div className="carousel-item">
-                <img src="https://source.unsplash.com/random/900x700/?Burger" className="d-block w-100" style={{ filter: "brightness(30%)" }} alt='...' />
+                <img src={img2} className="d-block w-100" style={{ filter: "brightness(30%)" }} alt='carouselImage' />
               </div>
               <div className="carousel-item">
-                <img src="https://source.unsplash.com/random/900x700/?soup" className="d-block w-100" style={{ filter: "brightness(30%)" }} alt='...' />
+                <img src={img3} className="d-block w-100" style={{ filter: "brightness(30%)" }} alt='carouselImage' />
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">

@@ -1,3 +1,21 @@
-.container{
-    /* background-color: red; */
+.connectionLink {
+  display: flex;
+  margin: 20px 0px 20px 0px;
+}
+.connectionLink .s_link{
+    margin-right: 20px;
+}
+@media only screen and (max-width: 991px) {
+  #sampleImage {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .connectionLink{
+    justify-content: space-between;
+  }
+  .connectionLink .s_link{
+    margin: 0;
+  }
 }
