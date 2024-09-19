@@ -1,9 +1,13 @@
 .card {
   background-color: black;
 }
+#buttons {
+  display: flex;
+  justify-content: space-between;
+}
 
 @media only screen and (max-width: 365px) {
-  #t1{
+  #t1 {
     /* background-color: red; */
     font-size: small;
   }
@@ -12,44 +16,78 @@
   }
 }
 
-@media only screen and (max-width: 1400px){
-  #card{
+@media only screen and (max-width: 1400px) {
+  #card {
     max-width: 16rem;
   }
-  #AddtoCart, #Description{
-    height: 3rem;
+  #AddtoCart {
+    height: 2.5rem;
     width: 5.8rem;
     font-size: small;
+    padding: 10px;
   }
-  #options{
+  #Description {
+    height: 2.5rem;
+    width: 5.8rem;
+    font-size: small;
+    padding: 10px;
+  }
+  #options {
     display: contents;
+  }
+  #options .quentity {
+    max-height: 30px;
   }
 }
 
-@media only screen and (max-width: 768px){
-  #card{
+@media only screen and (max-width: 768px) {
+  #card {
     max-width: 9rem;
     /* height: 18rem; */
   }
-  .card-title{
+  .card-title {
     font-size: medium;
     font-weight: 700;
     margin-bottom: 2px;
     /* background-color: red; */
   }
-  #AddtoCart, #Description{
+  #buttons {
+    display: block;
+    justify-content: center;
+  }
+  #AddtoCart {
     height: 2rem;
-    width: 100%;
+    width: 90%;
     font-size: small;
+    margin: 3px 7px;
+    padding: 0px;
+    align-items: center;
   }
-  #options{
-    /* display: flex; */
+  #Description {
+    height: 2rem;
+    width: 90%;
+    font-size: small;
+    margin: 3px 7px;
+    padding: 0px;
+    align-items: center;
   }
-  #card img{
+  #card img {
     max-height: 110px;
   }
-  #card .card-body{
+  #card .card-body {
     padding: 2px;
   }
-  
+  #card hr {
+    display: none;
+  }
+  #options {
+    display: contents;
+  }
+  #options .quentity {
+    max-height: 30px;
+    max-width: 4rem;
+  }
+  #quentity {
+    width: 2.5rem;
+  }
 }

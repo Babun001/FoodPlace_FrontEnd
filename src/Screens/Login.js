@@ -1,6 +1,7 @@
 // import React from 'react';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+// import './screen.css';
 
 export default function Login() {
     const [credentials, setcredentials] = useState({ email: "", password: "" })
@@ -38,9 +39,9 @@ export default function Login() {
     }
     return (
         <>
-            <div className='bg-dark' style={{ height: "920px" }}>
+            <div className='bg-dark' style={{ height: "100vh" }}>
                 <div className='container' style={{ width: "330px", paddingTop: "10%" }} >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="d-none">
+                    {/* <svg xmlns="http://www.w3.org/2000/svg" className="d-none">
                         <symbol id="check2" viewBox="0 0 16 16">
                             <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
                         </symbol>
@@ -54,9 +55,9 @@ export default function Login() {
                         <symbol id="sun-fill" viewBox="0 0 16 16">
                             <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
                         </symbol>
-                    </svg>
+                    </svg> */}
 
-                    <div className="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+                    {/* <div className="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
                         <button className="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
                             <svg className="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
                             <span className="visually-hidden" id="bd-theme-text">Toggle theme</span>
@@ -84,26 +85,26 @@ export default function Login() {
                                 </button>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
 
 
-                    <main className="form-signin w-100 m-auto">
+                    <main className="form-signin w-100 m-auto mt-5">
                         <form onSubmit={handleSubmit}>
                             {/* <img className="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" /> */}
                             <h2 className='h3 text-white' style={{ "marginLeft": "10px" }}>Welcome to FoodPlace</h2>
                             <h1 className="h5 mt-3 fw-normal blockquote-footer">Please sign in </h1>
 
-                            <div className="form-floating">
+                            <div className="form-floating mb-2">
                                 <input type="email" className="form-control" id="floatingInput" autoComplete='off' placeholder="name@example.com" name='email' value={credentials.email} onChange={onChange} />
                                 <label htmlFor="floatingInput">Email address</label>
                             </div>
-                            <div className="form-floating">
+                            <div className="form-floating mb-3">
                                 <input type="password" className="form-control" id="Password" autoComplete='off' placeholder="Password" name='password' value={credentials.password} onChange={onChange} />
                                 <label htmlFor="Password">Password</label>
                             </div>
 
                             <button className="btn btn-primary w-100 py-2" type="submit">Log in</button>
-                            <Link to="/SignUp" className='mt-3 btn btn-danger w-100 py-2'>i'm a new user</Link>
+                            <Link to="/SignUp" className='mt-2 btn btn-danger w-100 py-2'>i'm a new user</Link>
                             <p className="mt-3 mb-3 text-body-secondary">© FoodPlace B@bun140623</p>
                         </form>
                     </main>

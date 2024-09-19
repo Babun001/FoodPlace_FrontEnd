@@ -56,7 +56,7 @@ export default function Body(props) {
         <div className="card-body ">
           <h4 className="card-title">{props.foodItem.name} </h4>
           <div id='options' className='container w-100'>
-            <select id='quentity' className='m-2 h-100 text-white font-weight-bold bg-dark rounded' onChange={(e) => setquantity(e.target.value)}>
+            <select id='quentity' className='quentity m-2 h-100 text-white font-weight-bold bg-dark rounded' onChange={(e) => setquantity(e.target.value)}>
               {Array.from(Array(9), (e, i) => {
                 return (
                   <option key={i + 1} value={i + 1}>{i + 1}</option>
@@ -65,7 +65,7 @@ export default function Body(props) {
             </select>
 
 
-            <select className='m-2 h-100 text-white font-weight-bold bg-dark rounded' ref={priceRef} onChange={(e) => setsize(e.target.value)}>
+            <select className='quentity m-2 h-100 text-white font-weight-bold bg-dark rounded' ref={priceRef} onChange={(e) => setsize(e.target.value)}>
               {
                 priceOption.map((data) => {
                   return <option key={data} value={data}>{data}</option>
@@ -82,12 +82,12 @@ export default function Body(props) {
           {
             (localStorage.getItem("authToken"))
               ? <div id='buttons'>
-                <button id='AddtoCart' className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart} >Add to Cart</button>
-                <button id='Description' className='btn btn-dark justify-center ms-4' onClick={handleDescription}>Description</button>
+                <button id='AddtoCart' className='btn btn-dark justify-center  ' onClick={handleAddToCart} >Add to Cart</button>
+                <button id='Description' className='btn btn-dark justify-center' onClick={handleDescription}>Description</button>
               </div>
               : <div id='buttons'>
-                <button id='AddtoCart' className='btn btn-dark justify-center ms-2 ' onClick={handleAddToCart} disabled>Add to Cart</button>
-                <button id='Description' className='btn btn-dark justify-center ms-4' onClick={handleDescription} disabled>Description</button>
+                <button id='AddtoCart' className='btn btn-dark justify-center' onClick={handleAddToCart} disabled>Add to Cart</button>
+                <button id='Description' className='btn btn-dark justify-center' onClick={handleDescription} disabled>Description</button>
               </div>
           }
           {/* <div>

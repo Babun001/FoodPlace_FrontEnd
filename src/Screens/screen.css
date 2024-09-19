@@ -19,3 +19,7 @@
     margin: 0;
   }
 }
+
+#loginBody{
+  background-color: red;
+}
