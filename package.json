@@ -1,6 +1,6 @@
 {
   "name": "foodplace",
-  "version": "2.5.0",
+  "version": "2.5.2",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
