@@ -98,7 +98,8 @@ export default function Home() {
                       <div key={filterItems._id} id='cardss' className='d-flex justify-content-center col-6 col-md-6 col-xl-3'>
                         <Body foodItem={filterItems}
                           options={filterItems.options[0]}
-                          imgSrc={filterItems.img}></Body>
+                          imgSrc={filterItems.img}
+                          description = {filterItems.description}></Body>
                       </div>
                     )
                   })

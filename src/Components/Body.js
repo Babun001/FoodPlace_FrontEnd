@@ -13,9 +13,11 @@ export default function Body(props) {
   let data = useCart()
 
   let priceRef = useRef();
+  // let descriptionRef = useRef();
 
   const [quantity, setquantity] = useState(1);
   const [size, setsize] = useState("");
+  const [description, setDescription] = useState('');
 
   let finalPrice = quantity * parseInt(option[size]);
   useEffect(() => {
@@ -40,18 +42,20 @@ export default function Body(props) {
     //     return
     //   }      
     // };
-    await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity, size: size });
+    await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity, size: size , description: description});
   };
 
   const handleDescription = () => {
     // alert(props.foodItem.description);
-    alert(`Description is not ready yet!`)
+    setDescription(props.foodItem.description);
+    alert(description);
+    
   }
 
 
   return (
     <div>
-      <div id='card' className="card mt-3"  style={{display:"flex", "maxHeight": "360px", "width": "18rem" }}>
+      <div id='card' className="card mt-3" style={{ display: "flex", "maxHeight": "360px", "width": "18rem" }}>
         <img src={props.foodItem.img} alt="..." style={{ height: "180px", objectFit: "fill" }}></img>
         <div className="card-body ">
           <h4 className="card-title">{props.foodItem.name} </h4>
