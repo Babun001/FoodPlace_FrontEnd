@@ -42,15 +42,32 @@ export default function Body(props) {
     //     return
     //   }      
     // };
-    await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity, size: size , description: description});
+    await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, finalPrice: finalPrice, quantity: quantity, size: size, description: description });
   };
 
-  const handleDescription = () => {
-    // alert(props.foodItem.description);
-    setDescription(props.foodItem.description);
-    alert(description);
-    
+  // const handleDescription = () => {
+  //   // alert(props.foodItem.description);
+  //   if(props.foodItem){
+  //     setDescription(props.foodItem.name);
+  //     console.log(description)
+  //   }else{
+  //     alert(`description not reached!`);
+  //   }
+
+  // }
+
+  const handleDescription = () =>{
+    if(props.foodItem.description){
+      setDescription(props.foodItem.description);
+      console.log(props.foodItem.description);
+    }else{
+      console.log(`Description not available!`)
+    }
   }
+
+
+
+
 
 
   return (
