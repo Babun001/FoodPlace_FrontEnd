@@ -67,7 +67,7 @@ export default function Cart() {
 
                     <tbody>
                         {data.map((food, index) => (
-                            <tr>
+                            <tr key={index}>
                                 <th scope='row'> {index + 1} </th>
                                 <td>{food.name}</td>
                                 <td>{food.quantity}</td>

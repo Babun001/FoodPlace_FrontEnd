@@ -90,4 +90,17 @@
   #quentity {
     width: 2.5rem;
   }
+  #descId {
+    font-size: 12px;
+  }
+  #descriptionPara {
+    font-size: 10px;
+  }
+  #backDesc {
+    /* color: green; */
+    font-size: small;
+  }
+}
+#backDesc:hover{
+  color: rgb(194, 194, 194);
 }

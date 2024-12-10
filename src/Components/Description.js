@@ -1,11 +1,9 @@
-// import React from 'react';
-// import Body from './Body';
+import React from 'react';
 
-
-// export default function Description() {
-//   return (
-//     <div>
-//       <button className='btn btn-dark justify-center ms-4' onClick={handleDescription}>Description</button>
-//     </div>
-//   );
-// }
+export default function Description() {
+  return (
+    <div>
+      
+    </div>
+  );
+}
